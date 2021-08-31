@@ -1,0 +1,108 @@
+* {
+    --primary: #1F7F9D;
+    --secondary: #B7AA35;
+    --grey: #5F5F5F;
+    --dark-grey: #454444;
+}
+
+h1, h2, h3, h4, h5, h6, p, button {
+    color: var(--grey);
+}
+
+
+.l-restrict {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.l-restrict--narrow {
+    max-width: 900px;
+}
+
+.l-block {
+    /* margin: 4rem 0; */
+    padding: 6rem 1rem;
+    width: 100%;
+}
+
+.l-block--padding-none {
+    padding: 0 1rem;
+}
+
+.l-block--padding-half {
+    padding: 3rem 1rem;
+}
+
+.l-block--padding-top {
+    padding: 6rem 1rem 0 1rem;
+}
+
+.l-block--padding-bottom {
+    padding: 0 1rem 6rem 1rem;
+}
+
+.l-block--padding-large { 
+    padding: 9rem 1rem;
+}
+
+.l-block--padding-double {
+    padding: 12rem 1rem;
+}
+
+.l-block--primary {
+    background-color: var(--primary);
+}
+
+.l-block--secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.l-block--margin-top-1 {
+    margin-top: 1rem;
+}
+
+.l-block--margin-top-2 {
+    margin-top: 2rem;
+}
+
+.l-block--margin-top-3 {
+    margin-top: 3rem;
+}
+
+.l-block--margin-top-4 {
+    margin-top: 4rem;
+}
+
+.l-block--margin-top-5 {
+    margin-top: 5rem;
+}
+
+.l-block--margin-top-6 {
+    margin-top: 6rem;
+}
+
+.l-block--margin-bottom-1 {
+    margin-bottom: 1rem;
+}
+
+.l-block--margin-bottom-2 {
+    margin-bottom: 2rem;
+}
+
+.l-block--margin-bottom-3 {
+    margin-bottom: 3rem;
+}
+
+.l-block--margin-bottom-4 {
+    margin-bottom: 4rem;
+}
+
+.l-block--margin-bottom-5 {
+    margin-bottom: 5rem;
+}
+
+.l-block--margin-bottom-6 {
+    margin-bottom: 6rem;
+}

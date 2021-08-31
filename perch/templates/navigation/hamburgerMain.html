@@ -1,0 +1,22 @@
+<perch:before><ul class="c-hamburger__menu" data-type="slideover" data-expand="accordian"></perch:before>
+    <li 
+        class="<perch:if exists="current_page">selected</perch:if>
+               <perch:if exists="ancestor_page">ancestor</perch:if> 
+               c-hamburger__element"
+    >
+        <perch:if exists="subitems">
+            <button class="c-hamburger__element-button c-hamburger__element-button--hover-invert">
+                <i class="fas fa-chevron-down c-icon"></i>
+                <perch:pages id="pageNavText" />
+            </button>
+        <perch:else>
+            <a href="<perch:pages id="pagePath" />" class="c-hamburger__link c-hamburger__link--hover-invert">
+                <perch:pages id="pageNavText" />
+            </a>
+        </perch:if>
+        <perch:pages id="subitems" encode="false"/>
+    </li>
+    <perch:after>
+        <li class="c-hamburger__footer"><a href="mailto:stpetersstaithes@gmail.com">stpetersstaithes@gmail.com</a></li>
+    </ul>
+</perch:after>

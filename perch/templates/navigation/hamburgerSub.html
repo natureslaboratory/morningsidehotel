@@ -1,0 +1,7 @@
+<perch:before><ul class="c-hamburger__sub-menu"></perch:before>
+    <li class="<perch:if exists="current_page">selected</perch:if><perch:if exists="ancestor_page">ancestor</perch:if> c-hamburger__sub-element">
+        <a href="<perch:pages id="pagePath" />" class="c-hamburger__sub-link c-hamburger__sub-link--hover-invert">
+            <perch:pages id="pageNavText" />
+        </a>
+    </li>
+    <perch:after></ul></perch:after>

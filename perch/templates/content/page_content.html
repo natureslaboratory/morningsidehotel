@@ -1,0 +1,67 @@
+<perch:blocks>
+    <perch:block type="hero" label="Hero">
+        <div class="c-hero l-wrap">
+            <img class="c-hero__background" src="<perch:content type="image" id="bgImage" label="Background Image" width="1280" crop="true" />">
+            <div class="c-hero__background-mask"></div>
+            <h1 class="c-hero__title"><perch:content id="title" label="Title" type="text" /></h1>
+            <perch:repeater id="buttons" label="Buttons">
+                <perch:before><div class="c-hero__buttons"></perch:before>
+                    <a href="<perch:content id="link" type="text" label="Link" />">
+                        <button class="c-button">
+                            <perch:content id="Label" type="text" label="Label" />
+                        </button>
+                    </a>
+                <perch:after></div></perch:after>
+            </perch:repeater>
+        </div>
+    </perch:block>
+
+    <perch:block type="feature_text" label="Feature Text">
+        <div class="l-block c-feature-text">
+            <div class="c-feature-text__container">
+                <div class="l-restrict">
+                    <h2 class="c-feature-text__title d-gold-trim"><perch:content type="text" label="Title" id="title" /></h2>
+                    <div class="c-feature-text__text">
+                        <perch:content type="text" label="Text" id="text" />
+                    </div>
+                    <perch:repeater id="buttons" label="Buttons">
+                        <perch:before><div class="c-buttons"></perch:before>
+                            <a href="<perch:content id="link" type="text" label="Link" />">
+                                <button class="c-button">
+                                    <perch:content id="Label" type="textarea" label="Label" />
+                                </button>
+                            </a>
+                        <perch:after></div></perch:after>
+                    </perch:repeater>
+                </div>
+            </div>
+        </div>
+    </perch:block>
+
+    <perch:block type="showcase" label="Showcase">
+        <div class="l-block l-block--padding-<perch:content label="Padding" type="select" options="both, top, bottom, half, none" id="block_padding" > c-showcase">
+            <div class="l-restrict">
+                <perch:repeater id="items" label="Items">
+                    <perch:before><div class="c-showcase__items"></perch:before>
+                        <div class="c-showcase__item">
+                            <img class="c-showcase__item-image" src="<perch:content id="image" type="image" label="Image" width="800" crop />">
+                            <div class="c-showcase__item-content">
+                                <h3 class="c-showcase__item-title"><perch:content id="title" label="Title" type="text" /></h3>
+                                <p class="c-showcase__item-text"><perch:content id="text" label="Text" type="text" /></p>
+                                <perch:repeater id="buttons" label="Buttons">
+                                    <perch:before><div class="c-buttons"></perch:before>
+                                        <a href="<perch:content id="link" type="text" label="Link" />">
+                                            <button class="c-button">
+                                                <perch:content id="Label" type="text" label="Label" />
+                                            </button>
+                                        </a>
+                                    <perch:after></div></perch:after>
+                                </perch:repeater>
+                            </div>
+                        </div>
+                    <perch:after></div></perch:after>
+                </perch:repeater>
+            </div>
+        </div> 
+    </perch:block>
+</perch:blocks>

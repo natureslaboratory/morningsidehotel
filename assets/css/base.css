@@ -1,0 +1,127 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap'); */
+/* =[RES]= CSS Reset - derivative of YUI Reset CSS - http://developer.yahoo.com/yui/reset/#code ===== */
+
+html, body, div, pre, form, fieldset, input, h1, h2, h3, h4, h5, h6, p, textarea, ul, ol, li, dl, dt, dd, blockquote, th, td,
+/* HTML 5 elements */
+
+abbr, article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, summary, time, video {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+:root {
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.33rem;
+    --size-600: 1.77rem;
+    --size-700: 2.36rem;
+    --size-800: 3.15rem;
+    --size-900: 4.2rem;
+    --primary-color: rgb(39, 39, 39);
+    --secondary-color: white;
+    --accent-color: rgb(202, 108, 0);
+    --light-grey: rgb(247, 247, 247);
+    /* --header-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif; */
+    --default-font: 'Lora', sans-serif;
+    --border-radius-large: 25px;
+    --border-radius-small: 10px;
+    --box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.103);
+    --side-padding: 20px;
+}
+
+html {
+    font-size: 100%;
+}
+
+/*16px*/
+
+body {
+    background: white;
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#content {
+    flex-grow: 2;
+}
+
+p {
+    margin-bottom: 1rem;
+    /* font-size: 1.1rem; */
+    line-height: 1.35rem;
+    max-width: 75ch;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 0.7rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2.441rem;;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.563rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.563rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+small, .text_small {
+    font-size: 0.8rem;
+}
+
+a {
+    color: black;
+}
