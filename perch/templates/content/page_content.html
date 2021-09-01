@@ -64,4 +64,27 @@
             </div>
         </div> 
     </perch:block>
+
+    <perch:block type="cards" label="Cards">
+        <div class="l-block l-block--padding-<perch:content label="Padding" type="select" options="both, top, bottom, half, none" id="block_padding" > c-showcase">
+            <div class="l-restrict">
+                <perch:repeater id="cards" label="Cards">
+                    <perch:before><div class="c-cards"></perch:before>
+                        <div class="c-card">
+                            <img class="c-card__image" src="<perch:content label="Header Image" type="image" id="headerImage" />">
+                            <div class="c-card__content">
+                                <h4 class="c-card__title"><perch:content id="cardTitle" label="Card Title" type="text" /></h4>
+                                <div class="c-card__text">
+                                    <perch:content id="cardText" label="Text" type="textarea" editor="redactor" html />
+                                </div>
+                                <a class="c-card__link" href="<perch:content id="buttonLink" type="text" label="Button Link" />">
+                                    <button class="c-button c-button--secondary"><perch:content type="text" id="buttonLabel" label="Button Text" /></button>
+                                </a>
+                            </div>
+                        </div>
+                    <perch:after></div></perch:after>
+                </perch:repeater>
+            </div>
+        </div>
+    </perch:block>
 </perch:blocks>
