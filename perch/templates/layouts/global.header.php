@@ -22,7 +22,7 @@
                 <div class="c-logo">
                     <p>MH</p>
                 </div>
-                <div class="c-navigation show" data-breakpoint="350" data-type="dynamic" data-padding="30">
+                <div class="c-navigation show" data-breakpoint="500" data-type="dynamic" data-padding="-20" data-set-max-width="false">
                     <?php 
                     
                     perch_pages_navigation(array(

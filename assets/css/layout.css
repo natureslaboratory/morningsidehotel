@@ -1,5 +1,6 @@
 * {
     --primary: #1F7F9D;
+    --primary-light: #3d879e;
     --secondary: #B7AA35;
     --grey: #5F5F5F;
     --dark-grey: #454444;
@@ -48,6 +49,38 @@ h1, h2, h3, h4, h5, h6, p, button {
 
 .l-block--padding-double {
     padding: 12rem 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .l-block {
+        /* margin: 4rem 0; */
+        padding: 4rem 1rem;
+        width: 100%;
+    }
+    
+    .l-block--padding-none {
+        padding: 0 1rem;
+    }
+    
+    .l-block--padding-half {
+        padding: 2rem 1rem;
+    }
+    
+    .l-block--padding-top {
+        padding: 4rem 1rem 0 1rem;
+    }
+    
+    .l-block--padding-bottom {
+        padding: 0 1rem 4rem 1rem;
+    }
+    
+    .l-block--padding-large { 
+        padding: 6rem 1rem;
+    }
+    
+    .l-block--padding-double {
+        padding: 8rem 1rem;
+    }
 }
 
 .l-block--primary {

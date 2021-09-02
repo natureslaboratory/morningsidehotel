@@ -6,7 +6,7 @@
             <h1 class="c-hero__title"><perch:content id="title" label="Title" type="text" /></h1>
             <perch:repeater id="buttons" label="Buttons">
                 <perch:before><div class="c-hero__buttons"></perch:before>
-                    <a href="<perch:content id="link" type="text" label="Link" />">
+                    <a tabindex="-1" href="<perch:content id="link" type="text" label="Link" />">
                         <button class="c-button">
                             <perch:content id="Label" type="text" label="Label" />
                         </button>
@@ -26,7 +26,7 @@
                     </div>
                     <perch:repeater id="buttons" label="Buttons">
                         <perch:before><div class="c-buttons"></perch:before>
-                            <a href="<perch:content id="link" type="text" label="Link" />">
+                            <a tabindex="-1" href="<perch:content id="link" type="text" label="Link" />">
                                 <button class="c-button">
                                     <perch:content id="Label" type="textarea" label="Label" />
                                 </button>
@@ -50,7 +50,7 @@
                                 <p class="c-showcase__item-text"><perch:content id="text" label="Text" type="text" /></p>
                                 <perch:repeater id="buttons" label="Buttons">
                                     <perch:before><div class="c-buttons"></perch:before>
-                                        <a href="<perch:content id="link" type="text" label="Link" />">
+                                        <a tabindex="-1" href="<perch:content id="link" type="text" label="Link" />">
                                             <button class="c-button">
                                                 <perch:content id="Label" type="text" label="Label" />
                                             </button>
@@ -71,13 +71,13 @@
                 <perch:repeater id="cards" label="Cards">
                     <perch:before><div class="c-cards"></perch:before>
                         <div class="c-card">
-                            <img class="c-card__image" src="<perch:content label="Header Image" type="image" id="headerImage" />">
+                            <img class="c-card__image" src="<perch:content label="Header Image" type="image" id="headerImage" width="400" crop />">
                             <div class="c-card__content">
                                 <h4 class="c-card__title"><perch:content id="cardTitle" label="Card Title" type="text" /></h4>
                                 <div class="c-card__text">
                                     <perch:content id="cardText" label="Text" type="textarea" editor="redactor" html />
                                 </div>
-                                <a class="c-card__link" href="<perch:content id="buttonLink" type="text" label="Button Link" />">
+                                <a tabindex="-1" class="c-card__link" href="<perch:content id="buttonLink" type="text" label="Button Link" />">
                                     <button class="c-button c-button--secondary"><perch:content type="text" id="buttonLabel" label="Button Text" /></button>
                                 </a>
                             </div>
@@ -85,6 +85,36 @@
                     <perch:after></div></perch:after>
                 </perch:repeater>
             </div>
+        </div>
+    </perch:block>
+
+    <perch:block type="booking_enquiry" label="Booking Enquiry">
+        <div class="c-booking-form l-block l-block--padding-<perch:content label="Padding" type="select" options="both, top, bottom, half, none" id="block_padding" >" 
+            style="background-image: url(<perch:content id="background" label="Background Image" type="image" width="1440" crop />)">
+            <div class="l-restrict c-form">
+                <div class="c-form__info">
+                    <h2 class="c-form__title d-gold-trim"><perch:content type="text" id="title" label="Form Title" /></h2>
+                    <p class="c-form__text"><perch:content type="textarea" id="text" label="Form Information" /></p>
+                </div>
+                <perch:form id="booking_form" action="" method="post" app="perch_forms" label="Booking Enquiry" type="default"  class="c-booking-form__form">
+                    <div class="c-form__section">
+                        <perch:label class="c-form__label" for="name">Name</perch:label>
+                        <perch:input class="c-form__input" id="name" type="text" required />
+                    </div>
+                    <div class="c-form__section">
+                        <perch:label class="c-form__label" for="email">Email</perch:label>
+                        <perch:input class="c-form__input" id="email" type="text" required />
+                    </div>
+                    <div class="c-form__section">
+                        <perch:label class="c-form__label" for="enquiry">Enquiry</perch:label>
+                        <perch:input class="c-form__textarea" id="enquiry" type="textarea" required />
+                    </div>
+                    <div class="c-form__section">
+                        <perch:input type="submit" class="c-form__submit c-button" value="Send Message" id="submit" />
+                    </div>
+                </perch:form>
+            </div>
+            <div class="c-booking-form__overlay"></div>
         </div>
     </perch:block>
 </perch:blocks>

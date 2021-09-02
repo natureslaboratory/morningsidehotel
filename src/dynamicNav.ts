@@ -32,6 +32,12 @@ if (navigationArray) {
         })
     })
 
+    window.addEventListener("load", () => {
+        navigationArray.forEach(nav => {
+            nav.handleResize()
+        })
+    })
+
     window.addEventListener("resize", () => {
         navigationArray.forEach(nav => {
             nav.handleResize();

@@ -3,12 +3,15 @@ import Navigation from './Navigation';
 export default class DynamicNavigation extends Navigation {
     breakpoint: number;
     padding: number;
+    useMaxWidth: boolean;
 
     constructor(nav) {
         super(nav)
 
         this.breakpoint = parseInt(this.node.dataset.breakpoint) || 0;
         this.padding = parseInt(this.node.dataset.padding) || 0;
+        this.useMaxWidth = this.node.dataset.setMaxWidth == "true" ? true : false;
+        console.log(this.padding);
     }
 
     // Public Null
@@ -32,7 +35,9 @@ export default class DynamicNavigation extends Navigation {
             // this.setMaxWidth();
             timeout++
         }
-        this.setMaxWidth();
+        if (this.useMaxWidth) {
+            this.setMaxWidth();
+        }
 
         if (timeout > 900) {
             throw new Error("Infinite Loop");
@@ -41,7 +46,7 @@ export default class DynamicNavigation extends Navigation {
     }
 
     setMaxWidth() {
-        this.navBar.node.style.maxWidth = `${this.navBar.totalWidth+this.padding}px`;
+        this.navBar.node.style.maxWidth = `${this.navBar.totalWidth + this.padding}px`;
     }
 
     clearMaxWidth() {

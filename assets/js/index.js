@@ -634,6 +634,8 @@
             var _this = _super.call(this, nav) || this;
             _this.breakpoint = parseInt(_this.node.dataset.breakpoint) || 0;
             _this.padding = parseInt(_this.node.dataset.padding) || 0;
+            _this.useMaxWidth = _this.node.dataset.setMaxWidth == "true" ? true : false;
+            console.log(_this.padding);
             return _this;
         }
         // Public Null
@@ -656,7 +658,9 @@
                 // this.setMaxWidth();
                 timeout++;
             }
-            this.setMaxWidth();
+            if (this.useMaxWidth) {
+                this.setMaxWidth();
+            }
             if (timeout > 900) {
                 throw new Error("Infinite Loop");
             }
@@ -737,6 +741,11 @@
     }
     if (navigationArray) {
         window.addEventListener("DOMContentLoaded", function () {
+            navigationArray.forEach(function (nav) {
+                nav.handleResize();
+            });
+        });
+        window.addEventListener("load", function () {
             navigationArray.forEach(function (nav) {
                 nav.handleResize();
             });
