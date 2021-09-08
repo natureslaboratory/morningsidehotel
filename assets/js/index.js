@@ -757,4 +757,10 @@
         });
     }
 
+    // import "@natureslaboratory/responsive-nav"
+    var scrollToTopButton = document.getElementById("scrollToTop");
+    scrollToTopButton.addEventListener("click", function () {
+        window.scrollTo(0, 0);
+    });
+
 }());
