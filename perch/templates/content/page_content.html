@@ -48,11 +48,11 @@
                             <div class="c-showcase__item-content">
                                 <h3 class="c-showcase__item-title"><perch:content id="title" label="Title" type="text" /></h3>
                                 <p class="c-showcase__item-text"><perch:content id="text" label="Text" type="text" /></p>
-                                <perch:if exists="button">
+                                <perch:if exists="link">
                                     <div class="c-buttons">
-                                        <a tabindex="-1" href="<perch:content id="link" type="text" label="Link" />">
+                                        <a tabindex="-1" href="<perch:content id="link" type="text" label="Button Link" />">
                                             <button class="c-button">
-                                                <perch:content id="Label" type="text" label="Label" />
+                                                <perch:content id="Label" type="text" label="Button Label" />
                                             </button>
                                         </a>
                                     </div>
