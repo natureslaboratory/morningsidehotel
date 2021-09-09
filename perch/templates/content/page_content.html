@@ -117,4 +117,15 @@
             <div class="c-booking-form__overlay"></div>
         </div>
     </perch:block>
+
+    <perch:block type="text" label="Text">
+        <div class="l-block 
+                    l-block--padding-<perch:content label="Padding" type="select" options="both, top, bottom, half, none" id="block_padding" >
+                    l-block--background-<perch:content label="Background Colour" type="select" options="white, teal, grey" id="background" />">
+            <div class="l-restrict c-text c-text--text-align-<perch:content type="select" id="align" label="Text Align" options="left, centre, right" />"
+                 style="max-width: <perch:content type="select" id="maxWidth" label="Block Max-Width" options=", 1000, 900, 800, 700, 600, 500" />px">
+                <perch:content type="textarea" id="text" label="Text" editor="redactor" html />
+            </div>
+        </div>
+    </perch:block>
 </perch:blocks>

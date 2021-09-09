@@ -1,3 +1,17 @@
+h1, h2, h3 {
+    position: relative;
+    margin-left: 1.2rem;
+}
+
+:is(h1, h2, h3):before {
+    content: "";
+    background-color: var(--secondary);
+    height: 100%;
+    width: 6px;
+    position: absolute;
+    transform: translateX(-1.2rem);
+}
+
 .c-header {
     display: flex;
     align-items: center;
@@ -877,6 +891,25 @@
     padding-bottom: 1rem;
 }
 
+.c-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-text--text-align-centre {
+    text-align: center;
+    align-items: center;
+}
+
+
+.c-text--text-align-right {
+    text-align: right;
+    align-items: flex-end;
+}
+
+:is(.c-text--text-align-centre, .c-text--text-align-right) :is(ul, ol) {
+    text-align: left;
+}
 
 
 /* Media Queries */

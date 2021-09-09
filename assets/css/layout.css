@@ -83,6 +83,27 @@ h1, h2, h3, h4, h5, h6, p, button {
     }
 }
 
+.l-block--background-white {
+    background-color: white;
+}
+
+.l-block--background-teal {
+    background-color: var(--primary);
+}
+
+.l-block--background-grey {
+    background-color: var(--grey);
+}
+
+.l-block--background-dark-grey {
+    background-color: var(--dark-grey);
+}
+
+:is(.l-block--background-teal, .l-block--background-grey, .l-block--background--dark-grey) :is(p, h1, h2, h3, h4, h5, h6, ul, ol, li) {
+    color: white;
+}
+
+
 .l-block--primary {
     background-color: var(--primary);
 }
