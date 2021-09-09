@@ -1,5 +1,6 @@
 * {
-    --primary: #1F7F9D;
+    --teal: #1F7F9D;
+    --teal-light: #ecf4f7;
     --primary-light: #3d879e;
     --secondary: #B7AA35;
     --grey: #5F5F5F;
@@ -88,7 +89,11 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 
 .l-block--background-teal {
-    background-color: var(--primary);
+    background-color: var(--teal);
+}
+
+.l-block--background-light-teal {
+    background-color: var(--teal-light);
 }
 
 .l-block--background-grey {
@@ -104,8 +109,8 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 
 
-.l-block--primary {
-    background-color: var(--primary);
+.l-block--teal {
+    background-color: var(--teal);
 }
 
 .l-block--secondary {
