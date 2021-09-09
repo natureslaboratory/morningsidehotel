@@ -122,6 +122,12 @@ h1, h2, h3 {
     font-weight: 400;
     color: var(--dark-grey);
     text-align: center;
+    margin: 0;
+}
+
+.c-hero__title:before{
+    height: 0;
+    width: 0;
 }
 
 .c-indent {
