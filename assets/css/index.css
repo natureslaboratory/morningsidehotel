@@ -927,6 +927,14 @@ h1::before {
     text-align: left;
 }
 
+.c-image {
+    position: relative;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
 
 /* Media Queries */
 

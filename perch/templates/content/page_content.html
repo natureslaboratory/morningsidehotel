@@ -128,4 +128,11 @@
             </div>
         </div>
     </perch:block>
+
+    <perch:block type="imageBreak" label="Image">
+        <div class="l-block c-image" 
+             style="background-image: url(<perch:content type="image" label="Image" id="image" width="1920" />);
+                    background-attachment: <perch:content type="select" id="attachment" label="Type" options="fixed, scroll" >;">
+        </div>
+    </perch:block>
 </perch:blocks>
