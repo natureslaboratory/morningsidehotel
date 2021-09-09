@@ -48,15 +48,15 @@
                             <div class="c-showcase__item-content">
                                 <h3 class="c-showcase__item-title"><perch:content id="title" label="Title" type="text" /></h3>
                                 <p class="c-showcase__item-text"><perch:content id="text" label="Text" type="text" /></p>
-                                <perch:repeater id="buttons" label="Buttons">
-                                    <perch:before><div class="c-buttons"></perch:before>
+                                <perch:if exists="button">
+                                    <div class="c-buttons">
                                         <a tabindex="-1" href="<perch:content id="link" type="text" label="Link" />">
                                             <button class="c-button">
                                                 <perch:content id="Label" type="text" label="Label" />
                                             </button>
                                         </a>
-                                    <perch:after></div></perch:after>
-                                </perch:repeater>
+                                    </div>
+                                </perch:if>
                             </div>
                         </div>
                     <perch:after></div></perch:after>
