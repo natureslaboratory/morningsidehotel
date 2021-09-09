@@ -639,6 +639,7 @@ h1, h2, h3 {
 
 .c-navbar {
     align-items: stretch;
+    margin: 0;
 }
 
 .c-hamburger {
