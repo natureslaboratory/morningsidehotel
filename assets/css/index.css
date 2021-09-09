@@ -935,6 +935,52 @@ h1::before {
     background-size: cover;
 }
 
+.c-book__widget-container {
+    display: none;
+}
+
+.c-book {
+    display: flex;
+    justify-content: center;
+}
+
+.c-book__form {
+    display: flex;
+    /* max-width: 400px; */
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.c-book__form .c-button {
+    background-color: var(--secondary);
+    /* color: var(--primary); */
+    color: white;
+    padding: 0 0.9rem;
+    border: none;
+}
+
+.c-book__form input {
+    background-color: white;
+    height: 40px;
+}
+
+.c-book__form label {
+    position: absolute;
+    top: -2rem;
+    transform: translate(0, 0);
+    background-color: transparent;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.c-book__form .c-form__input {
+    padding: 0.6rem 0.3rem;
+}
+
+.c-book__form *:nth-child(2) input {
+    width: 60px;
+    text-align: center;
+}
 
 /* Media Queries */
 

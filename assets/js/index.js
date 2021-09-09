@@ -757,6 +757,74 @@
         });
     }
 
+    var Book = /** @class */ (function () {
+        /** Pass in .c-book
+         *
+         */
+        function Book(node) {
+            this.node = node;
+            this.checkForWidget();
+        }
+        Book.prototype.initialise = function () {
+            this.getNodes();
+            this.addEventListeners();
+        };
+        Book.prototype.addEventListeners = function () {
+            var _this = this;
+            this.UISearch.addEventListener("click", function (e) {
+                e.preventDefault();
+                _this.widgetDate.value = _this.UIDate.value;
+                _this.widgetNights.value = _this.UINights.value;
+                _this.widgetSearch.click();
+            });
+        };
+        Book.prototype.checkForWidget = function () {
+            var _this = this;
+            if (document.getElementById("f2b_search_form")) {
+                this.initialise();
+            }
+            else {
+                this.interval = setInterval(function () {
+                    if (document.getElementById("f2b_search_form")) {
+                        _this.initialise();
+                        clearInterval(_this.interval);
+                    }
+                }, 5);
+            }
+        };
+        Book.prototype.makeNumberTwoDigit = function (num) {
+            var numStr = num.toString();
+            if (numStr.length == 1) {
+                return "0" + numStr;
+            }
+            return numStr;
+        };
+        Book.prototype.formatDate = function (date) {
+            var year = date.getFullYear();
+            var month = this.makeNumberTwoDigit(date.getMonth() + 1);
+            var day = this.makeNumberTwoDigit(date.getDate());
+            return year + "-" + month + "-" + day;
+        };
+        Book.prototype.getNodes = function () {
+            var widgetWrapper = document.getElementById("f2b_search_form");
+            this.widgetDate = document.getElementById("checkIn");
+            this.widgetNights = document.getElementById("stayLength");
+            this.widgetSearch = widgetWrapper.getElementsByClassName("searchButton")[0];
+            this.UIDate = this.node.getElementsByClassName("c-book__form-date")[0];
+            console.log(this.formatDate(new Date()));
+            this.UIDate.defaultValue = this.formatDate(new Date());
+            this.UINights = this.node.getElementsByClassName("c-book__form-nights")[0];
+            this.UINights.value = "3";
+            this.UISearch = this.node.getElementsByClassName("c-book__form-search")[0];
+        };
+        return Book;
+    }());
+
+    var books = Array.from(document.getElementsByClassName("c-book"));
+    books.forEach(function (b) {
+        new Book(b);
+    });
+
     // import "@natureslaboratory/responsive-nav"
     var scrollToTopButton = document.getElementById("scrollToTop");
     scrollToTopButton.addEventListener("click", function () {

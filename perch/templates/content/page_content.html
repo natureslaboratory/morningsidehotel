@@ -135,4 +135,26 @@
                     background-attachment: <perch:content type="select" id="attachment" label="Type" options="fixed, scroll" >;">
         </div>
     </perch:block>
+
+    <perch:block type="book" label="Book Now">
+        <div class="l-block 
+                    l-block--padding-<perch:content label="Padding" type="select" options="both, top, bottom, half, none" id="block_padding" >
+                    l-block--background-<perch:content label="Background Colour" type="select" options="white, teal, grey" id="background" />">
+            <div class="l-restrict c-book">
+                <form class="c-book__form">
+                    <div class="c-form__section">
+                        <label class="c-form__label" for="date">Date</label>
+                        <input class="c-form__input c-book__form-date" id="date" type="date" required >
+                    </div>
+                    <div class="c-form__section">
+                        <label class="c-form__label" for="nights">Nights</label>
+                        <input class="c-form__input c-book__form-nights" id="nights" type="number" required min="1" >
+                    </div>
+                    <div class="c-form__section">
+                        <button type="submit" class="c-button c-book__form-search">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </perch:block>
 </perch:blocks>

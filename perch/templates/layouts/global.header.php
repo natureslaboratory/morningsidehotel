@@ -16,6 +16,9 @@
 <body>
 
 <body>
+    <div class="c-book__widget-container">
+        <div id="f2b-widget"><script src="https://www.freetobook.com/affiliates/dynamicWidget/js/widget-js.php?w_id=14363&w_tkn=sJbM7QbkZMFXXhSMNCMi9gj9CRxAIPN69IdgkmpPJ1wPItrZoLjfmyH9nLAq6&w_new=1" type="text/javascript"></script></div>
+    </div>
     <div class="l-wrap c-header__wrapper">
         <div class="l-block l-block--padding-none">
             <div class="c-header">
