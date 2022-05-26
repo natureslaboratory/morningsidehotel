@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/jackbarber/morningside.jackbarber.co.uk/
+    - export DEPLOYPATH=/home/morningsidewhitby/morningsidehotelwhitby.co.uk/
     - /bin/cp -R * $DEPLOYPATH
