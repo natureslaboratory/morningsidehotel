@@ -15,6 +15,7 @@
 
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="/assets/js/index.js?v=<?= rand() ?>"></script>
 
 </html>

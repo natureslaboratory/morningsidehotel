@@ -1,0 +1,19 @@
+<perch:blocks>
+    <perch:block type="iframe" label="iframe">
+        <perch:if exists="url">
+            <iframe src="<perch:blog type="text" id="url" label="iframe URL" />"></iframe>
+        </perch:if>
+    </perch:block>
+
+    <perch:block type="gist" label="Gist">
+        <perch:if exists="url">
+            <div class="gist">
+                <script src="<perch:blog type="text" id="url" label="Gist URL" />"></script>
+            </div>
+        </perch:if>
+    </perch:block>
+
+    <perch:block type="text" label="Text">
+        <perch:blog type="textarea" id="text" label="Text" markdown editor="markitup" size="xxl autowidth" />
+    </perch:block>
+</perch:blocks>

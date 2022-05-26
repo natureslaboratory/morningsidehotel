@@ -314,7 +314,7 @@ h1::before {
 .c-images {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-    gap: 6rem;
+    gap: 3rem;
 }
 
 .c-images__image {
