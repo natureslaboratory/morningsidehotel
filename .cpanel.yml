@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/morningsidewhitby/morningsidehotelwhitby.co.uk/
+    - export DEPLOYPATH=/home/morningsidewhitby/public_html/
     - /bin/cp -R * $DEPLOYPATH
